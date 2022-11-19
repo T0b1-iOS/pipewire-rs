@@ -13,7 +13,7 @@ pub struct Buffer<'s, D> {
 }
 
 impl<D> Buffer<'_, D> {
-    pub(crate) unsafe fn from_raw(
+    pub unsafe fn from_raw(
         buf: *mut pw_sys::pw_buffer,
         stream: &Stream<D>,
     ) -> Option<Buffer<'_, D>> {
